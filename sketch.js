@@ -142,13 +142,27 @@ function draw() {
     }
   }
 
-  
 
-  if(gameScreen == 2){
+
+  if(gameScreen == 1){
+    if (receivedMessage == Tag2{
+      gameScreen = 5;
+    }
+  }
+  if (gameScreen == 5)
     if (timerStarted==false){
       timerStarted=true;
       setTimeout(function(){
         gameScreen = 6;
+        timerStarted=false;
+      },5000);
+    }
+  }
+  if(gameScreen == 6){
+    if (timerStarted==false){
+      timerStarted=true;
+      setTimeout(function(){
+        gameScreen = 7;
         timerStarted=false;
       },5000);
     }
