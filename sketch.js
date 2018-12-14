@@ -29,21 +29,22 @@ var clickStatus = false;
 var timerStarted = false;
 
 function preload() {
-  img = loadImage('assets/screens-03.jpg');
-  img2 = loadImage('assets/screens-04.jpg');
-  img3 = loadImage('assets/screens-05.jpg');
-  img4 = loadImage('assets/screens-06.jpg');
-  img5 = loadImage('assets/screens-07.jpg');
-  img6 = loadImage('assets/screens-08.jpg');
-  img7 = loadImage('assets/screens-09.jpg');
-  img8 = loadImage('assets/screens-10.jpg');
-  img9 = loadImage('assets/screens-11.jpg');
-  img13 = loadImage('assets/screens-12.jpg');
-  img10 = loadImage('assets/screens-14.jpg');
-  img11 = loadImage('assets/screens-15.jpg');
-  img12pre1 = loadImage('assets/screens-17.jpg');
-  img12pre2 = loadImage('assets/screens-16.jpg');
-  img12 = loadImage('assets/screens-20.jpg');
+  img1 = loadImage('assets/dd/screens.jpg')
+  img = loadImage('assets/dd/screens2.jpg');
+  img2 = loadImage('assets/dd/screens3.jpg');
+  img3 = loadImage('assets/dd/screens4.jpg');
+  img4 = loadImage('assets/dd/screens5.jpg');
+  img5 = loadImage('assets/dd/screens6.jpg');
+  img6 = loadImage('assets/dd/screens7.jpg');
+  img7 = loadImage('assets/dd/screens8.jpg');
+  img8 = loadImage('assets/dd/screens9.jpg');
+  img9 = loadImage('assets/dd/screens10.jpg');
+  img13 = loadImage('assets/dd/screens11.jpg');
+  img10 = loadImage('assets/dd/screens12.jpg');
+  img11 = loadImage('assets/dd/screens13.jpg');
+  img12pre1 = loadImage('assets/dd/screens14.jpg');
+  img12pre2 = loadImage('assets/dd/screens15.jpg');
+  img12 = loadImage('assets/dd/screens16.jpg');
 }
 
 function setup() {
@@ -251,7 +252,7 @@ function draw() {
   function displayScreen() {
     switch (gameScreen) {
       case 0:
-        image(img, 0, 0);
+        image(img, 0, 0,width,height);
         break;
       case 1:
         image(img2, 0, 0);
@@ -335,4 +336,8 @@ function draw() {
     message = new Paho.MQTT.Message(message);
     message.destinationName = topic;
     client.send(message);
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
   }
