@@ -63,6 +63,14 @@ function draw() {
   background(220);
   displayScreen();
 
+  if (gameScreen==15){
+    if (clickStatus) {
+      gameScreen = 0;
+      console.log("vado a screen " + gameScreen);
+      clickStatus = false;
+    }
+  }
+
   if (gameScreen == 0) {
     if (receivedMessage == Tag1) {
       gameScreen = 1;
@@ -296,6 +304,8 @@ function draw() {
       case 14:
         image(img13, 0, 0,width,height);
         break;
+      case 15:
+      image(img1, 0, 0,width,height);
       default:
     }
   }
