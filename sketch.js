@@ -142,6 +142,8 @@ function draw() {
     }
   }
 
+  
+
   if(gameScreen == 2){
     if (timerStarted==false){
       timerStarted=true;
