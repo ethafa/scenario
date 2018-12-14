@@ -29,7 +29,7 @@ var clickStatus = false;
 var timerStarted = false;
 
 function preload() {
-  img1 = loadImage('assets/dd/screens.jpg')
+  img1 = loadImage('./assets/dd/screens.jpg')
   img = loadImage('assets/dd/screens2.jpg');
   img2 = loadImage('assets/dd/screens3.jpg');
   img3 = loadImage('assets/dd/screens4.jpg');
