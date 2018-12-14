@@ -26,7 +26,7 @@ var Tag13 = 'noLight';
 var img;
 var clickStatus = false;
 
-var timerStarted=false;
+var timerStarted = false;
 
 function preload() {
   img = loadImage('assets/screens-03.jpg');
@@ -110,6 +110,7 @@ function draw() {
       console.log("vado a screen " + gameScreen);
     }
   }
+
   if (gameScreen == 3) {
     if (receivedMessage == Tag5) {
       gameScreen = 0;
@@ -142,203 +143,196 @@ function draw() {
     }
   }
 
-
-
-  if(gameScreen == 1){
-    if (receivedMessage == Tag2{
-      gameScreen = 5;
-    }
-  }
-  if (gameScreen == 5)
-    if (timerStarted==false){
-      timerStarted=true;
-      setTimeout(function(){
-        gameScreen = 6;
-        timerStarted=false;
-      },5000);
-    }
-  }
-  if(gameScreen == 6){
-    if (timerStarted==false){
-      timerStarted=true;
-      setTimeout(function(){
-        gameScreen = 7;
-        timerStarted=false;
-      },5000);
-    }
-  }
-  /*  setTimeout(function() {
-              gameScreen = 3;
-            }, 5000);
-
-        }
-        if (gameScreen == 1) {
-          if (clickStatus) {
-            gameScreen = 3;
-            console.log("vado a screen " + gameScreen);
-            clickStatus = false;
-          }
-        }
-
-        if (char2position == Tag2) {
-          gameScreen = 5;
-          console.log("vado a screen " + gameScreen);
-          setTimeout(function() {
-            gameScreen = 6;
-            console.log("vado a screen " + gameScreen);
-          }, 5000);
-        }
-
-        if (gameScreen == 6) {
-          setTimeout(function() {
-            gameScreen = 7;
-            console.log("vado a screen " + gameScreen);
-          }, 5000);
-        }*/
-
   if (gameScreen == 1) {
-    if (receivedMessage == Tag4) {
-      gameScreen = 7;
-      console.log("vado a screen " + gameScreen);
+    if (receivedMessage == Tag2) {
+        gameScreen = 5;
+      }
+    }
+    if (gameScreen == 5) {
+      if (timerStarted == false) {
+        timerStarted = true;
+        setTimeout(function() {
+          gameScreen = 6;
+          timerStarted = false;
+        }, 5000);
+      }
+    }
+    if (gameScreen == 6) {
+      if (timerStarted == false) {
+        timerStarted = true;
+        setTimeout(function() {
+          gameScreen = 7;
+          timerStarted = false;
+        }, 5000);
+      }
+    }
+    /*  setTimeout(function() {
+                gameScreen = 3;
+              }, 5000);
+
+          }
+          if (gameScreen == 1) {
+            if (clickStatus) {
+              gameScreen = 3;
+              console.log("vado a screen " + gameScreen);
+              clickStatus = false;
+            }
+          }
+
+          if (char2position == Tag2) {
+            gameScreen = 5;
+            console.log("vado a screen " + gameScreen);
+            setTimeout(function() {
+              gameScreen = 6;
+              console.log("vado a screen " + gameScreen);
+            }, 5000);
+          }
+
+          if (gameScreen == 6) {
+            setTimeout(function() {
+              gameScreen = 7;
+              console.log("vado a screen " + gameScreen);
+            }, 5000);
+          }*/
+
+    if (gameScreen == 7) {
+      if (receivedMessage == Tag1) {
+        gameScreen = 14;
+        console.log("vado a screen " + gameScreen);
+      } else if (receivedMessage == Tag3) {
+        gameScreen = 10;
+        console.log("vado a screen " + gameScreen);
+      } else if (receivedMessage == Tag11) {
+        gameScreen = 9;
+        console.log("vado a screen " + gameScreen);
+      }
+    }
+    if ((gameScreen == 10) || (gameScreen == 9)) {
+      if ((char1position == Tag3) && (char2position == Tag11)) {
+        gameScreen = 11;
+        console.log("vado a screen " + gameScreen);
+      }
+      if (clickStatus) {
+        gameScreen = 7;
+        console.log("vado a screen " + gameScreen);
+        clickStatus = false;
+      }
+
       receivedMessage = "";
     }
-  }
-  if (gameScreen==7){
-    if (receivedMessage == Tag1){
-      gameScreen = 14;
-      console.log("vado a screen " + gameScreen);
-    } else if (receivedMessage == Tag3){
-      gameScreen = 10;
-      console.log("vado a screen " + gameScreen);
-    }else if (receivedMessage == Tag11){
-      gameScreen = 9;
-      console.log("vado a screen " + gameScreen);
-    }
-  }
-  if ((gameScreen == 10) || (gameScreen == 9)) {
-    if ((char1position == Tag3) && (char2position == Tag11)) {
-      gameScreen = 11;
-      console.log("vado a screen " + gameScreen);
-    } if (clickStatus) {
-      gameScreen = 7;
-      console.log("vado a screen " + gameScreen);
-      clickStatus = false;
+    if ((gameScreen == 10) || (gameScreen == 9)) {
+      if ((char1position == Tag11) && (char2position == Tag3)) {
+        gameScreen = 11;
+        console.log("vado a screen " + gameScreen);
+      }
+      if (clickStatus) {
+        gameScreen = 7;
+        console.log("vado a screen " + gameScreen);
+        clickStatus = false;
+      }
+      receivedMessage = "";
     }
 
-    receivedMessage = "";
-  }
-  if ((gameScreen == 10) || (gameScreen == 9)) {
-    if ((char1position == Tag11) && (char2position == Tag3)) {
-      gameScreen = 11;
-      console.log("vado a screen " + gameScreen);
-    } if (clickStatus) {
-      gameScreen = 7;
-      console.log("vado a screen " + gameScreen);
-      clickStatus = false;
+    if (gameScreen == 11) {
+      if (char2position == Tag13) {
+        gameScreen = 1;
+        console.log("vado a screen " + gameScreen);
+      }
     }
-    receivedMessage = "";
+    if (gameScreen == 1) {
+      if (clickStatus) {
+        gameScreen = 7;
+        console.log("vado a screen " + gameScreen);
+        clickStatus = false;
+      }
+    }
   }
 
-  if (gameScreen == 11){
-    if (char2position == Tag13) {
-      gameScreen = 1;
-      console.log("vado a screen " + gameScreen);
-    }
-  }
-  if (gameScreen == 1) {
-    if (clickStatus) {
-      gameScreen = 7;
-      console.log("vado a screen " + gameScreen);
-      clickStatus = false;
-    }
-  }
-  }
-
-function displayScreen() {
-  switch (gameScreen) {
-    case 0:
-      image(img, 0, 0);
-      break;
-    case 1:
-      image(img2, 0, 0);
-      break;
-    case 2:
-      image(img3, 0, 0);
-      break;
-    case 3:
-      image(img4, 0, 0);
-      break;
-    case 4:
-      image(img5, 0, 0);
-      break;
-    case 5:
-      image(img6, 0, 0);
-      break;
-    case 6:
-      image(img7, 0, 0);
-      break;
-    case 7:
-      image(img8, 0, 0);
-      break;
-    case 8:
-      image(img9, 0, 0);
-      break;
-    case 9:
-      image(img10, 0, 0);
-      break;
-    case 10:
-      image(img11, 0, 0);
-      break;
-    case 11:
-      image(img12, 0, 0);
-      break;
-    case 12:
-      image(img12pre1, 0, 0);
-      break;
-    case 13:
-      image(img12pre2, 0, 0);
-      break;
+  function displayScreen() {
+    switch (gameScreen) {
+      case 0:
+        image(img, 0, 0);
+        break;
+      case 1:
+        image(img2, 0, 0);
+        break;
+      case 2:
+        image(img3, 0, 0);
+        break;
+      case 3:
+        image(img4, 0, 0);
+        break;
+      case 4:
+        image(img5, 0, 0);
+        break;
+      case 5:
+        image(img6, 0, 0);
+        break;
+      case 6:
+        image(img7, 0, 0);
+        break;
+      case 7:
+        image(img8, 0, 0);
+        break;
+      case 8:
+        image(img9, 0, 0);
+        break;
+      case 9:
+        image(img10, 0, 0);
+        break;
+      case 10:
+        image(img11, 0, 0);
+        break;
+      case 11:
+        image(img12, 0, 0);
+        break;
+      case 12:
+        image(img12pre1, 0, 0);
+        break;
+      case 13:
+        image(img12pre2, 0, 0);
+        break;
       case 14:
         image(img13, 0, 0);
         break;
-    default:
+      default:
+    }
   }
-}
-//text(receivedMessage, width/2,height/2);
-//  console.log('val:');
-//  console.log(gameScreen);
-function mouseClicked() {
-  sendMessage("/minorinteractive/studio/test/1", "got a message");
-  console.log("click");
-  clickStatus = true;
-}
-
-function onConnect() {
-  // Once a connection has been made, make a subscription and send a message.
-  console.log("connected to mosquitto");
-  client.subscribe("/etafa-rfid/#");
-}
-
-function onConnectionLost(responseObject) {
-  if (responseObject.errorCode !== 0) {
-    console.log("onConnectionLost:" + responseObject.errorMessage);
-  }
-}
-
-function onMessageArrived(message) {
-  console.log(message.destinationName + " -> " + message.payloadString);
-  receivedMessage = message.payloadString;
-
-  if (message.destinationName == "/etafa-rfid/1") {
-    char1position = receivedMessage;
-  } else if (message.destinationName == "/etafa-rfid/2") {
-    char2position = receivedMessage;
+  //text(receivedMessage, width/2,height/2);
+  //  console.log('val:');
+  //  console.log(gameScreen);
+  function mouseClicked() {
+    sendMessage("/minorinteractive/studio/test/1", "got a message");
+    console.log("click");
+    clickStatus = true;
   }
 
-}
+  function onConnect() {
+    // Once a connection has been made, make a subscription and send a message.
+    console.log("connected to mosquitto");
+    client.subscribe("/etafa-rfid/#");
+  }
 
-function sendMessage(topic, message) {
-  message = new Paho.MQTT.Message(message);
-  message.destinationName = topic;
-  client.send(message);
-}
+  function onConnectionLost(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      console.log("onConnectionLost:" + responseObject.errorMessage);
+    }
+  }
+
+  function onMessageArrived(message) {
+    console.log(message.destinationName + " -> " + message.payloadString);
+    receivedMessage = message.payloadString;
+
+    if (message.destinationName == "/etafa-rfid/1") {
+      char1position = receivedMessage;
+    } else if (message.destinationName == "/etafa-rfid/2") {
+      char2position = receivedMessage;
+    }
+
+  }
+
+  function sendMessage(topic, message) {
+    message = new Paho.MQTT.Message(message);
+    message.destinationName = topic;
+    client.send(message);
+  }
