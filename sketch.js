@@ -255,46 +255,46 @@ function draw() {
         image(img, 0, 0,width,height);
         break;
       case 1:
-        image(img2, 0, 0);
+        image(img2, 0, 0,width,height);
         break;
       case 2:
-        image(img3, 0, 0);
+        image(img3, 0, 0,width,height);
         break;
       case 3:
-        image(img4, 0, 0);
+        image(img4, 0, 0,width,height);
         break;
       case 4:
-        image(img5, 0, 0);
+        image(img5, 0, 0,width,height);
         break;
       case 5:
-        image(img6, 0, 0);
+        image(img6, 0, 0,width,height);
         break;
       case 6:
-        image(img7, 0, 0);
+        image(img7, 0, 0,width,height);
         break;
       case 7:
-        image(img8, 0, 0);
+        image(img8, 0, 0,width,height);
         break;
       case 8:
-        image(img9, 0, 0);
+        image(img9, 0, 0,width,height);
         break;
       case 9:
-        image(img10, 0, 0);
+        image(img10, 0, 0,width,height);
         break;
       case 10:
-        image(img11, 0, 0);
+        image(img11, 0, 0,width,height);
         break;
       case 11:
-        image(img12, 0, 0);
+        image(img12, 0, 0,width,height);
         break;
       case 12:
-        image(img12pre1, 0, 0);
+        image(img12pre1, 0, 0,width,height);
         break;
       case 13:
-        image(img12pre2, 0, 0);
+        image(img12pre2, 0, 0,width,height);
         break;
       case 14:
-        image(img13, 0, 0);
+        image(img13, 0, 0,width,height);
         break;
       default:
     }
