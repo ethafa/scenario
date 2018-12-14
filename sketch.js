@@ -7,7 +7,7 @@ var receivedMessage = "";
 var char1position = "";
 var char2position = "";
 
-var gameScreen = 0;
+var gameScreen = 15;
 
 var Tag1 = '2253548096';
 var Tag2 = '1448307264';
@@ -45,6 +45,7 @@ function preload() {
   img12pre1 = loadImage('assets/dd/screens14.jpg');
   img12pre2 = loadImage('assets/dd/screens15.jpg');
   img12 = loadImage('assets/dd/screens16.jpg');
+  img16 = loadImage('assets/dd/17.jpg');
 }
 
 function setup() {
@@ -63,7 +64,7 @@ function draw() {
   background(220);
   displayScreen();
 
-  if (gameScreen==15){
+  if (gameScreen == 15) {
     if (clickStatus) {
       gameScreen = 0;
       console.log("vado a screen " + gameScreen);
@@ -169,103 +170,106 @@ function draw() {
 
   if (gameScreen == 1) {
     if (receivedMessage == Tag2) {
-        gameScreen = 6;
-      }
+      gameScreen = 6;
     }
-    if (gameScreen == 6) {
-      if (timerStarted == false) {
-        timerStarted = true;
-        setTimeout(function() {
-          gameScreen = 7;
-          timerStarted = false;
-        }, 5000);
-      }
-    }
-    if (gameScreen == 7) {
-      if (timerStarted == false) {
-        timerStarted = true;
-        setTimeout(function() {
-          gameScreen = 8;
-          timerStarted = false;
-        }, 5000);
-      }
-    }
-    /*  setTimeout(function() {
-                gameScreen = 3;
-              }, 5000);
-
-          }
-          if (gameScreen == 1) {
-            if (clickStatus) {
-              gameScreen = 3;
-              console.log("vado a screen " + gameScreen);
-              clickStatus = false;
-            }
-          }
-
-          if (char2position == Tag2) {
-            gameScreen = 5;
-            console.log("vado a screen " + gameScreen);
-            setTimeout(function() {
-              gameScreen = 6;
-              console.log("vado a screen " + gameScreen);
-            }, 5000);
-          }
-
-          if (gameScreen == 6) {
-            setTimeout(function() {
-              gameScreen = 7;
-              console.log("vado a screen " + gameScreen);
-            }, 5000);
-          }*/
-
-    if (gameScreen == 8) {
-      if (receivedMessage == Tag1) {
-        gameScreen = 14;
-        console.log("vado a screen " + gameScreen);
-      } else if (receivedMessage == Tag3) {
-        gameScreen = 10;
-        console.log("vado a screen " + gameScreen);
-      } else if (receivedMessage == Tag11) {
-        gameScreen = 9;
-        console.log("vado a screen " + gameScreen);
-      }
-    }
-    if ((gameScreen == 10) || (gameScreen == 9)) {
-      if ((char1position == Tag3) && (char2position == Tag11)) {
-        gameScreen = 11;
-        console.log("vado a screen " + gameScreen);
-      }
-      if (clickStatus) {
-        gameScreen = 8;
-        console.log("vado a screen " + gameScreen);
-        clickStatus = false;
-      }
-
-      receivedMessage = "";
-    }
-    if ((gameScreen == 10) || (gameScreen == 9)) {
-      if ((char1position == Tag11) && (char2position == Tag3)) {
-        gameScreen = 11;
-        console.log("vado a screen " + gameScreen);
-      }
-      if (clickStatus) {
-        gameScreen = 8;
-        console.log("vado a screen " + gameScreen);
-        clickStatus = false;
-      }
-      receivedMessage = "";
-    }
-
-    if (gameScreen == 11) {
-      if (char2position == Tag13) {
-        gameScreen = 1;
-        console.log("vado a screen " + gameScreen);
-      }
-    }
-    if (gameScreen == 1) {
-      if (clickStatus) {
+  }
+  if (gameScreen == 6) {
+    if (timerStarted == false) {
+      timerStarted = true;
+      setTimeout(function() {
         gameScreen = 7;
+        timerStarted = false;
+      }, 3000);
+    }
+  }
+  if (gameScreen == 7) {
+    if (timerStarted == false) {
+      timerStarted = true;
+      setTimeout(function() {
+        gameScreen = 8;
+        timerStarted = false;
+      }, 3000);
+    }
+  }
+
+  if (gameScreen == 8) {
+    if (clickStatus) {
+      gameScreen = 14;
+      console.log("vado a screen " + gameScreen);
+      clickStatus = false;
+    }
+  }
+  if (gameScreen == 14) {
+    if (receivedMessage == Tag1) {
+      gameScreen = 9;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag3) {
+      gameScreen = 12;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag11) {
+      gameScreen = 10;
+      console.log("vado a screen " + gameScreen);
+    }
+  }
+  if (gameScreen == 9) {
+    if (receivedMessage == Tag3) {
+      gameScreen = 12;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag11) {
+      gameScreen = 10;
+      console.log("vado a screen " + gameScreen);
+    }
+  }
+  if (gameScreen == 12) {
+    if (receivedMessage == Tag1) {
+      gameScreen = 9;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag11) {
+      gameScreen = 10;
+      console.log("vado a screen " + gameScreen);
+    }
+  }
+  if (gameScreen == 10) {
+    if (receivedMessage == Tag1) {
+      gameScreen = 9;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag3) {
+      gameScreen = 12;
+      console.log("vado a screen " + gameScreen);
+    }
+  }
+  if ((gameScreen == 12) || (gameScreen == 10)) {
+    if ((char1position == Tag3) && (char2position == Tag11)) {
+      gameScreen = 13;
+      console.log("vado a screen " + gameScreen);
+    }
+    if (clickStatus) {
+      gameScreen = 14;
+      console.log("vado a screen " + gameScreen);
+      clickStatus = false;
+    }
+    receivedMessage = "";
+  }
+  if ((gameScreen == 12) || (gameScreen == 10)) {
+    if ((char1position == Tag11) && (char2position == Tag3)) {
+      gameScreen = 13;
+      console.log("vado a screen " + gameScreen);
+    }
+    if (clickStatus) {
+      gameScreen = 13;
+      console.log("vado a screen " + gameScreen);
+      clickStatus = false;
+    }
+    receivedMessage = "";
+  }
+  if (gameScreen == 13) {
+      if (char2position == Tag13) {
+        gameScreen = 11;
+      }
+    }
+    if (gameScreen == 11){
+      if (clickStatus) {
+        gameScreen = 16;
         console.log("vado a screen " + gameScreen);
         clickStatus = false;
       }
@@ -275,52 +279,55 @@ function draw() {
   function displayScreen() {
     switch (gameScreen) {
       case 0:
-        image(img, 0, 0,width,height);
+        image(img, 0, 0, width, height);
         break;
       case 1:
-        image(img2, 0, 0,width,height);
+        image(img2, 0, 0, width, height);
         break;
       case 2:
-        image(img3, 0, 0,width,height);
+        image(img3, 0, 0, width, height);
         break;
       case 3:
-        image(img4, 0, 0,width,height);
+        image(img4, 0, 0, width, height);
         break;
       case 4:
-        image(img5, 0, 0,width,height);
+        image(img5, 0, 0, width, height);
         break;
       case 5:
-        image(img6, 0, 0,width,height);
+        image(img6, 0, 0, width, height);
         break;
       case 6:
-        image(img7, 0, 0,width,height);
+        image(img7, 0, 0, width, height);
         break;
       case 7:
-        image(img8, 0, 0,width,height);
+        image(img8, 0, 0, width, height);
         break;
       case 8:
-        image(img9, 0, 0,width,height);
+        image(img9, 0, 0, width, height);
         break;
       case 9:
-        image(img10, 0, 0,width,height);
+        image(img10, 0, 0, width, height);
         break;
       case 10:
-        image(img11, 0, 0,width,height);
+        image(img11, 0, 0, width, height);
         break;
       case 11:
-        image(img12, 0, 0,width,height);
+        image(img12, 0, 0, width, height);
         break;
       case 12:
-        image(img12pre1, 0, 0,width,height);
+        image(img12pre1, 0, 0, width, height);
         break;
       case 13:
-        image(img12pre2, 0, 0,width,height);
+        image(img12pre2, 0, 0, width, height);
         break;
       case 14:
-        image(img13, 0, 0,width,height);
+        image(img13, 0, 0, width, height);
         break;
       case 15:
-      image(img1, 0, 0,width,height);
+        image(img1, 0, 0, width, height);
+        break;
+      case 16:
+        image(img16, 0, 0, width, height);
       default:
     }
   }
