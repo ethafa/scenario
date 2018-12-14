@@ -76,7 +76,7 @@ function draw() {
       gameScreen = 1;
       console.log("vado a screen " + gameScreen);
     } else if (receivedMessage == Tag5) {
-      gameScreen = 0;
+      gameScreen = 5;
       console.log("vado a screen " + gameScreen);
     } else if (receivedMessage == Tag7) {
       gameScreen = 3;
@@ -91,7 +91,7 @@ function draw() {
   }
   if (gameScreen == 1) {
     if (receivedMessage == Tag5) {
-      gameScreen = 0;
+      gameScreen = 5;
       console.log("vado a screen " + gameScreen);
     } else if (receivedMessage == Tag7) {
       gameScreen = 3;
@@ -106,7 +106,7 @@ function draw() {
   }
   if (gameScreen == 2) {
     if (receivedMessage == Tag5) {
-      gameScreen = 0;
+      gameScreen = 5;
       console.log("vado a screen " + gameScreen);
     } else if (receivedMessage == Tag7) {
       gameScreen = 3;
@@ -122,7 +122,7 @@ function draw() {
 
   if (gameScreen == 3) {
     if (receivedMessage == Tag5) {
-      gameScreen = 0;
+      gameScreen = 5;
       console.log("vado a screen " + gameScreen);
     } else if (receivedMessage == Tag1) {
       gameScreen = 1;
@@ -138,7 +138,22 @@ function draw() {
 
   if (gameScreen == 4) {
     if (receivedMessage == Tag5) {
-      gameScreen = 0;
+      gameScreen = 5;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag7) {
+      gameScreen = 3;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag1) {
+      gameScreen = 1;
+      console.log("vado a screen " + gameScreen);
+    } else if (receivedMessage == Tag6) {
+      gameScreen = 2;
+      console.log("vado a screen " + gameScreen);
+    }
+  }
+  if (gameScreen == 5) {
+    if (receivedMessage == Tag8) {
+      gameScreen = 4;
       console.log("vado a screen " + gameScreen);
     } else if (receivedMessage == Tag7) {
       gameScreen = 3;
@@ -154,16 +169,7 @@ function draw() {
 
   if (gameScreen == 1) {
     if (receivedMessage == Tag2) {
-        gameScreen = 5;
-      }
-    }
-    if (gameScreen == 5) {
-      if (timerStarted == false) {
-        timerStarted = true;
-        setTimeout(function() {
-          gameScreen = 6;
-          timerStarted = false;
-        }, 5000);
+        gameScreen = 6;
       }
     }
     if (gameScreen == 6) {
@@ -171,6 +177,15 @@ function draw() {
         timerStarted = true;
         setTimeout(function() {
           gameScreen = 7;
+          timerStarted = false;
+        }, 5000);
+      }
+    }
+    if (gameScreen == 7) {
+      if (timerStarted == false) {
+        timerStarted = true;
+        setTimeout(function() {
+          gameScreen = 8;
           timerStarted = false;
         }, 5000);
       }
@@ -204,7 +219,7 @@ function draw() {
             }, 5000);
           }*/
 
-    if (gameScreen == 7) {
+    if (gameScreen == 8) {
       if (receivedMessage == Tag1) {
         gameScreen = 14;
         console.log("vado a screen " + gameScreen);
@@ -222,7 +237,7 @@ function draw() {
         console.log("vado a screen " + gameScreen);
       }
       if (clickStatus) {
-        gameScreen = 7;
+        gameScreen = 8;
         console.log("vado a screen " + gameScreen);
         clickStatus = false;
       }
@@ -235,7 +250,7 @@ function draw() {
         console.log("vado a screen " + gameScreen);
       }
       if (clickStatus) {
-        gameScreen = 7;
+        gameScreen = 8;
         console.log("vado a screen " + gameScreen);
         clickStatus = false;
       }
