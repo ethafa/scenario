@@ -66,14 +66,14 @@ function draw() {
   displayScreen();
 
   if (gameScreen == 15) {
-    if (receiveMessage == Tag10) {
+    if (receivedMessage == Tag10) {
       gameScreen = 17;
       console.log("vado a screen " + gameScreen);
       clickStatus = false;
     }
   }
   if (gameScreen == 17) {
-    if (receiveMessage == Tag10) {
+    if (receivedMessage == Tag10) {
       gameScreen = 0;
       console.log("vado a screen " + gameScreen);
       clickStatus = false;
