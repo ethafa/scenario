@@ -69,14 +69,14 @@ function draw() {
     if (receivedMessage == Tag10) {
       gameScreen = 17;
       console.log("vado a screen " + gameScreen);
-      clickStatus = false;
+      
     }
   }
   if (gameScreen == 17) {
     if (receivedMessage == Tag10) {
       gameScreen = 0;
       console.log("vado a screen " + gameScreen);
-      clickStatus = false;
+      
     }
   }
 
