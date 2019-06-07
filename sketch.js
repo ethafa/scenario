@@ -66,7 +66,7 @@ function draw() {
   displayScreen();
 
   if (gameScreen == 15) {
-    if touchStarted() {
+    if (clickStatus) {
       gameScreen = 17;
       console.log("vado a screen " + gameScreen);
       clickStatus = false;
