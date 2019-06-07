@@ -66,10 +66,10 @@ function draw() {
   displayScreen();
 
   if (gameScreen == 15) {
-    if (touchStarted()) {
+    if touchStarted() {
       gameScreen = 17;
       console.log("vado a screen " + gameScreen);
-      clickStatus = false;
+      return = false;
     }
   }
   if (gameScreen == 17) {
