@@ -73,7 +73,7 @@ function draw() {
     }
   }
   if (gameScreen == 17) {
-    if (receivedMessage == Tag10) {
+    if (receivedMessage == Tag9) {
       gameScreen = 0;
       console.log("vado a screen " + gameScreen);
       
