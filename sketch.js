@@ -29,7 +29,7 @@ var clickStatus = false;
 var timerStarted = false;
 
 function preload() {
-  img1 = loadImage('./assets/dd/screens.jpg')
+  img1 = loadImage('assets/dd/screens.jpg');
   img = loadImage('assets/dd/screens2.jpg');
   img2 = loadImage('assets/dd/screens3.jpg');
   img3 = loadImage('assets/dd/screens4.jpg');
@@ -46,6 +46,7 @@ function preload() {
   img12pre2 = loadImage('assets/dd/screens15.jpg');
   img12 = loadImage('assets/dd/screens16.jpg');
   img16 = loadImage('assets/dd/17.jpg');
+  img17 = loadImage('assets/dd/plus.jpg');
 }
 
 function setup() {
@@ -65,6 +66,13 @@ function draw() {
   displayScreen();
 
   if (gameScreen == 15) {
+    if (clickStatus) {
+      gameScreen = 17;
+      console.log("vado a screen " + gameScreen);
+      clickStatus = false;
+    }
+  }
+  if (gameScreen == 17) {
     if (clickStatus) {
       gameScreen = 0;
       console.log("vado a screen " + gameScreen);
@@ -173,24 +181,7 @@ function draw() {
       gameScreen = 6;
     }
   }
-  if (gameScreen == 6) {
-    if (timerStarted == false) {
-      timerStarted = true;
-      setTimeout(function() {
-        gameScreen = 7;
-        timerStarted = false;
-      }, 3000);
-    }
-  }
-  if (gameScreen == 7) {
-    if (timerStarted == false) {
-      timerStarted = true;
-      setTimeout(function() {
-        gameScreen = 8;
-        timerStarted = false;
-      }, 3000);
-    }
-  }
+
 
   if (gameScreen == 8) {
     if (clickStatus) {
@@ -328,6 +319,10 @@ function draw() {
         break;
       case 16:
         image(img16, 0, 0, width, height);
+      break;
+      case 17:
+        image(img17, 0, 0, width, height);
+        break;
       default:
     }
   }
