@@ -9,18 +9,9 @@ var char2position = "";
 
 var gameScreen = 15;
 
-var Tag1 = '2253548096';
-var Tag2 = '1448307264';
-var Tag3 = '652110400';
-var Tag4 = '3336399424';
-var Tag5 = '3336071744';
-var Tag6 = '642083648';
-var Tag7 = '909405248';
-var Tag8 = '3336596544';
-var Tag9 = '2252696384';
-var Tag10 = '3593694272';
-var Tag11 = '3590484800';
-var Tag13 = 'noLight';
+var Tag1 = '1461239334';
+var Tag2 = '3033601756';
+var Tag3 = '2448556847';
 
 
 var img;
