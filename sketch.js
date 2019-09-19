@@ -72,23 +72,12 @@ function draw() {
   }
 
   if (gameScreen == 0) {
-    if (receivedMessage == Tag1) {
+    if (receivedMessage == Tag2) {
       gameScreen = 1;
       console.log("vado a screen " + gameScreen);
-    } else if (receivedMessage == Tag5) {
-      gameScreen = 5;
-      console.log("vado a screen " + gameScreen);
-    } else if (receivedMessage == Tag7) {
-      gameScreen = 3;
-      console.log("vado a screen " + gameScreen);
-    } else if (receivedMessage == Tag6) {
-      gameScreen = 2;
-      console.log("vado a screen " + gameScreen);
-    } else if (receivedMessage == Tag8) {
-      gameScreen = 4;
-      console.log("vado a screen " + gameScreen);
-    }
+    } 
   }
+  
   if (gameScreen == 1) {
     if (receivedMessage == Tag5) {
       gameScreen = 5;
@@ -261,10 +250,10 @@ function draw() {
   function displayScreen() {
     switch (gameScreen) {
       case 0:
-        image(img, 0, 0, width, height);
+        image(img1, 0, 0, width, height);
         break;
       case 1:
-        image(img2, 0, 0, width, height);
+        image(img, 0, 0, width, height);
         break;
       case 2:
         image(img3, 0, 0, width, height);
