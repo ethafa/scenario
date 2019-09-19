@@ -75,7 +75,13 @@ function draw() {
     if (receivedMessage == Tag2) {
       gameScreen = 1;
       console.log("vado a screen " + gameScreen);
-    } 
+    } else if (receivedMessage == Tag1) {
+      gameScreen = 1;
+      console.log("vado a screen " + gameScreen);
+  }else if (receivedMessage == Tag3) {
+      gameScreen = 1;
+      console.log("vado a screen " + gameScreen);
+  }
   }
   
   if (gameScreen == 1) {
